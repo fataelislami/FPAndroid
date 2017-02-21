@@ -1,25 +1,16 @@
 package com.example.fataelislami.sensorkomurindo;
 
-import android.content.Context;
 import android.content.Intent;
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.fataelislami.sensorkomurindo.View.Acelerometer;
 import com.example.fataelislami.sensorkomurindo.View.GPS;
 import com.example.fataelislami.sensorkomurindo.View.Gyroscope;
 import com.example.fataelislami.sensorkomurindo.View.KOMPAS;
-import com.example.fataelislami.sensorkomurindo.View.Magnetometer;
 import com.example.fataelislami.sensorkomurindo.View.Orientasi;
-
-import org.w3c.dom.Text;
+import com.example.fataelislami.sensorkomurindo.View.SemuaSensor;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     Button gyro;
     @BindView(R.id.AcelButton)
     Button acel;
+    @BindView(R.id.SS)
+    Button SS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +57,11 @@ public class MainActivity extends AppCompatActivity {
     public void pindahOrientasi(){
         Intent Orientasi=new Intent(this,Orientasi.class);
         startActivity(Orientasi);
+    }
+    @OnClick(R.id.SS)
+    public void semuasensor(){
+        Intent SS = new Intent(this, SemuaSensor.class);
+        startActivity(SS);
     }
 
 }

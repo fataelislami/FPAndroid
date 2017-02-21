@@ -97,6 +97,7 @@
             android:text="X"
             android:layout_span="3"
             android:gravity="center"
+            android:id="@+id/xOrientasi"
 
             android:textColor="#f2f2f2"/>
         <TextView
@@ -106,6 +107,7 @@
             android:text="Y"
             android:layout_span="3"
             android:gravity="center"
+            android:id="@+id/yOrientasi"
 
             android:textColor="#f2f2f2"/>
         <TextView
@@ -115,6 +117,7 @@
             android:text="Z"
             android:layout_span="3"
             android:gravity="center"
+            android:id="@+id/zOrientasi"
 
             android:textColor="#f2f2f2"/>
 
@@ -134,27 +137,9 @@
             android:text="X"
             android:layout_span="3"
             android:gravity="center"
+            android:id="@+id/xKompasensor"
 
             android:textColor="#f2f2f2"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:text="Y"
-            android:layout_span="3"
-            android:gravity="center"
-
-            android:textColor="#f2f2f2"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:text="Z"
-            android:layout_span="3"
-            android:gravity="center"
-
-            android:textColor="#f2f2f2"/>
-
 
     </TableRow>
     <TableRow
@@ -171,6 +156,7 @@
             android:text="X"
             android:layout_span="3"
             android:gravity="center"
+            android:id="@+id/xGyros"
 
             android:textColor="#f2f2f2"/>
         <TextView
@@ -181,7 +167,8 @@
             android:layout_span="3"
             android:gravity="center"
 
-            android:textColor="#f2f2f2"/>
+            android:textColor="#f2f2f2"
+            android:id="@+id/yGyros"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -189,6 +176,7 @@
             android:text="Z"
             android:layout_span="3"
             android:gravity="center"
+            android:id="@+id/zGyros"
 
             android:textColor="#f2f2f2"/>
 
@@ -205,7 +193,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18dp"
-            android:text="X"
+            android:text="Latitude"
             android:layout_span="3"
             android:gravity="center"
 
@@ -214,7 +202,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18dp"
-            android:text="Y"
+            android:text="Logintude"
             android:layout_span="3"
             android:gravity="center"
 
@@ -223,7 +211,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18dp"
-            android:text="Z"
+            android:text="Altitude"
             android:layout_span="3"
             android:gravity="center"
 
@@ -245,7 +233,7 @@
             android:text="X"
             android:layout_span="3"
             android:gravity="center"
-
+            android:id="@+id/Lattitude"
             android:textColor="#f2f2f2"/>
         <TextView
             android:layout_width="match_parent"
@@ -254,7 +242,7 @@
             android:text="Y"
             android:layout_span="3"
             android:gravity="center"
-
+            android:id="@+id/Longitude"
             android:textColor="#f2f2f2"/>
         <TextView
             android:layout_width="match_parent"
@@ -263,11 +251,14 @@
             android:text="Z"
             android:layout_span="3"
             android:gravity="center"
-
+            android:id="@+id/Altitude"
             android:textColor="#f2f2f2"/>
 
 
-    </TableRow>
 
+    </TableRow>
+<Button
+    android:text="Refresh"
+    android:id="@+id/RefreshGPS"/>
 
 </TableLayout>

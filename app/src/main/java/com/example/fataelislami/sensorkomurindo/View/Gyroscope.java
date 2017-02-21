@@ -29,6 +29,7 @@ public class Gyroscope extends AppCompatActivity implements SensorEventListener 
     @BindView(R.id.button2) Button tombol2;
     private SensorManager mSensorManager;
     private Sensor mSensorGyro;
+    public float x,y,z;
 
 
     @Override
@@ -53,9 +54,9 @@ public class Gyroscope extends AppCompatActivity implements SensorEventListener 
     }
 @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
-       float x = sensorEvent.values[0];
-       float y = sensorEvent.values[1];
-       float z = sensorEvent.values[2];
+       x = sensorEvent.values[0];
+       y = sensorEvent.values[1];
+       z = sensorEvent.values[2];
         if(sensorEvent.accuracy==SensorManager.SENSOR_STATUS_UNRELIABLE){
             return;
         }

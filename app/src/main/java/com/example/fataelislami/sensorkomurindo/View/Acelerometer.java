@@ -32,12 +32,13 @@ public class Acelerometer extends AppCompatActivity implements SensorEventListen
     Button Tombol;
     @BindView(R.id.keterangan)
     TextView Keterangan;
-    Float x,y,z;
     private SensorManager mSensorManager;
     private Sensor mSensorAcel;
     private final float NOISE = (float) 2.0;
     private boolean mInitialized;
     float posisiX,posisiY,posisiZ;
+    public float x,y,z;
+    public float deltaX,deltaY,deltaZ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,9 +62,9 @@ public class Acelerometer extends AppCompatActivity implements SensorEventListen
 
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
-        float x=sensorEvent.values[0];
-        float y=sensorEvent.values[1];
-        float z=sensorEvent.values[2];
+        x=sensorEvent.values[0];
+        y=sensorEvent.values[1];
+        z=sensorEvent.values[2];
         if (!mInitialized) {
             posisiX = x;
             posisiY = y;
@@ -74,9 +75,9 @@ public class Acelerometer extends AppCompatActivity implements SensorEventListen
             mInitialized = true;
         }
         else {
-            float deltaX = Math.abs(posisiX - x);
-            float deltaY = Math.abs(posisiY - y);
-            float deltaZ = Math.abs(posisiZ - z);
+            deltaX = Math.abs(posisiX - x);
+            deltaY = Math.abs(posisiY - y);
+            deltaZ = Math.abs(posisiZ - z);
             if (deltaX < NOISE) deltaX = (float)0.0;
             if (deltaY < NOISE) deltaY = (float)0.0;
             if (deltaZ < NOISE) deltaZ = (float)0.0;
